@@ -1,0 +1,2 @@
+export const AUTHOR_NAME = "Nigel Southway";
+export const AUTHOR_INTRO = "An independent business consultant and the author of Cycle Time Management: The Fast Track to Time-Based Productivity Improvement, a LEAN thinking textbook.";
