@@ -1,0 +1,43 @@
+.main{
+    display: flex;
+}
+
+.featured{
+    line-height: 30px;
+}
+
+.featured p{
+    margin-bottom: 20px;
+}
+
+p.last::after{
+    content: "";
+    height: 3px;
+    width: 40px;
+    background-color: var(---primary);
+    display: block;
+    margin-top: 10px;
+}
+
+.action{
+    display: flex;
+    margin-top: 30px;
+}
+
+.action button{
+    padding: 17px 40px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action button:first-child{
+    background-color: var(---primary);
+    color: white;
+}
+
+.action button:last-child{
+    background-color: white;
+    color: var(---primary);
+}

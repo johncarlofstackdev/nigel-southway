@@ -2,7 +2,8 @@ import "@/styles/globals.css"; // React library for building UI components
 import { Lexend_Deca } from "next/font/google"; // Google Fonts
 
 // Components
-import Sidebar from "@/compnents/sidebar";
+import Sidebar from "@/components/sideBar";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 // Styles
 import left from "@/styles/left.module.css";
@@ -35,7 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode, ti
                 <input type="text" placeholder="Write Something..." />
               </div>
             </div>
+            <Breadcrumbs styles={right} />
             {children}
+            <footer className={right.footerarea}>
+              <p>© Copyright 2023 <span className={right.footername}>NIGEL SOUTHWAY</span>. All Rights Reserved.</p>
+            </footer>
           </div>
         </div>
       </body>

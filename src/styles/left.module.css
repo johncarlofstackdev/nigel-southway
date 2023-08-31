@@ -54,14 +54,24 @@
     color: var(---primary);
 }
 
+.nav li a{
+    transition: 0.3s;
+}
+
 .right-icon {
     display: inline-block;
     margin-left: auto;
 }
 
+.right-icon{
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
 .active {
     background: var(---primary);
     color: white;
+    transition: 0.3s;
 }
 
 .active i{
@@ -72,17 +82,26 @@
     font-weight: bold;
 }
 
+.active .right-icon{
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
 .nav-child {
     margin: 13px 30px;
     position: relative;
-    display: none;
+    max-height: 0px;
+    overflow: hidden;
+    transition:  0.5s;
+    visibility: hidden;
+    margin-top: -15px;
 }
 
-.nav-child li a{
+.nav-child li a, .open-child li a{
     padding: 12px 30px;
 }
 
-.nav-child li::before {
+.nav-child li::before, .open-child li::before {
     content: "";
     background: var(---primary);
     display: inline-block;
@@ -92,4 +111,18 @@
     top: 4px;
     height: 100%;
     z-index: 400;
+}
+
+.open-child {
+    margin: 13px 30px;
+    position: relative;
+    transition: max-height 0.5s;
+    max-height: 120px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.active-child{
+    color: var(---primary);
+    font-weight: bold;
 }
