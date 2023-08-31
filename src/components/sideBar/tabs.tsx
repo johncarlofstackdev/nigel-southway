@@ -17,7 +17,7 @@ import {
     faPoll
 } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { currentPath } from "@/components/path";
+import { CurrentPath } from "@/components/path";
 
 interface tabsProps {
     styles: any;

@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { currentPath, getPathSegments } from "@/components/path";
+import { GetPathSegments } from "@/components/path";
 
 interface breadcrumbsProps {
     styles: any
 };
 
 const Breadcrumbs: React.FC<breadcrumbsProps> = ({ styles }) => {
-    const pathSegments = getPathSegments();
+    const pathSegments = GetPathSegments();
 
     // === By Default Home does contain 2 array Empty String
     if(!pathSegments[0] && !pathSegments[1]){
