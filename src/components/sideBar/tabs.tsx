@@ -24,7 +24,7 @@ interface tabsProps {
 };
 
 const Tabs: React.FC<tabsProps> = ({ styles }) => {
-    const active = currentPath();
+    const active = CurrentPath();
     
     // ==== Videos Child Reference
     const videsChildProperties = ["introduction","more"];
