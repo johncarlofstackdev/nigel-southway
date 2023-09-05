@@ -41,3 +41,22 @@ p.last::after{
     background-color: white;
     color: var(---primary);
 }
+
+@media screen and (max-width: 940px) {
+    .main{
+        display: block;
+    }
+
+    .main figure img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .action{
+        display: block;
+    }
+
+    .action button{
+        width: 100%;
+    }
+}
