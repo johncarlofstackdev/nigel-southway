@@ -14,7 +14,7 @@ const More: React.FC = () => {
       <p className={Styles.last}>Welcome to the &quot;Take Back Manufacturing&quot; video series, where we explore the imperative for Western economies to reclaim manufacturing and recover national prosperity as outlined in this insightful book.</p>
       <div className={Styles.list}>
         <div className={Styles.card}>
-          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div className={Styles.about}>
               <h2>TBM Book Intro</h2>
               <span>Description</span>
@@ -23,7 +23,7 @@ const More: React.FC = () => {
         </div>
         <hr className="hr-horizontal" />
         <div className={Styles.card}>
-          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div className={Styles.about}>
               <h2>TBM Book Intro</h2>
               <span>Description</span>
@@ -32,7 +32,7 @@ const More: React.FC = () => {
         </div>
         <hr className="hr-horizontal" />
         <div className={Styles.card}>
-          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div className={Styles.about}>
               <h2>TBM Book Intro</h2>
               <span>Description</span>
@@ -41,7 +41,7 @@ const More: React.FC = () => {
         </div>
         <hr className="hr-horizontal" />
         <div className={Styles.card}>
-          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="400" height="250" src="https://www.youtube.com/embed/KI72TcxUw7A" title="TBM BOOK intro" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div className={Styles.about}>
               <h2>TBM Book Intro</h2>
               <span>Description</span>
