@@ -17,7 +17,7 @@ const ContactUs: React.FC = () => {
   return (
     <main className={Styles.main}>
         <h2>Contact Us</h2>
-        <p>Your questions, ideas, and feedback matter to us. At &sbquo;Take Back Manufacturing,&sbquo; we&sbquo;re passionate about the resurgence of industry and fostering insightful discussions. If you have inquiries about the book, want to explore topics related to manufacturing, or simply wish to share your thoughts, we're here to listen. Our commitment to engaging with our audience extends beyond these virtual pages. Reach out to us, and let's continue the conversation. Your input fuels our mission, and we look forward to connecting with you.</p>
+        <p>Your questions, ideas, and feedback matter to us. At &sbquo;Take Back Manufacturing,&sbquo; we&sbquo;re passionate about the resurgence of industry and fostering insightful discussions. If you have inquiries about the book, want to explore topics related to manufacturing, or simply wish to share your thoughts, we&apos;re here to listen. Our commitment to engaging with our audience extends beyond these virtual pages. Reach out to us, and let&apos;s continue the conversation. Your input fuels our mission, and we look forward to connecting with you.</p>
         <p>Application for TBM newsletter and events list</p>
         <hr className="hr-horizontal" />
         <form id={Styles.mainform}>

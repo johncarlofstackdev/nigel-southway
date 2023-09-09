@@ -17,7 +17,7 @@ const AboutTheAuthor: React.FC = () => {
   return (
     <main className={Styles.main}>
         <h2>Meet the Author</h2>
-        <p>Delve into the life and experiences that have shaped the creative mind behind the words. Our 'About the Author' page offers an intimate glimpse into the journey, passions, and insights of the individual who penned the pages you've come to enjoy. Discover the inspirations, motivations, and unique perspective that breathe life into their work. Join us in getting to know the author behind the stories, and find a deeper connection to the literary world you love.</p>
+        <p>Delve into the life and experiences that have shaped the creative mind behind the words. Our &apos;About the Author&apos; page offers an intimate glimpse into the journey, passions, and insights of the individual who penned the pages you&apos;ve come to enjoy. Discover the inspirations, motivations, and unique perspective that breathe life into their work. Join us in getting to know the author behind the stories, and find a deeper connection to the literary world you love.</p>
         <div className={Styles.content}>
             <Image 
                 src="/images/author.jpg"

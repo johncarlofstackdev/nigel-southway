@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const Latest: React.FC = () => {
   return (
     <main>
-     <p>Welcome to our website. We're currently in the midst of refreshing our introduction to provide you with an even better experience. Stay tuned for our updated intro that will reflect our mission and offerings more accurately. In the meantime, please explore the rest of our site, and if you have any questions or need assistance, don't hesitate to reach out. Thank you for your patience as we work on these improvements.</p>
+     <p>Welcome to our website. We&apos;re currently in the midst of refreshing our introduction to provide you with an even better experience. Stay tuned for our updated intro that will reflect our mission and offerings more accurately. In the meantime, please explore the rest of our site, and if you have any questions or need assistance, don&apos;t hesitate to reach out. Thank you for your patience as we work on these improvements.</p>
      <br />
     </main>
   );
