@@ -20,7 +20,7 @@ const Breadcrumbs: React.FC<breadcrumbsProps> = ({ styles }) => {
         <div className={styles.breadcrumbs}>
             <ul>
                 {pathSegments.map((value, i) => (
-                    <li key={i}>{!value ? "Home" : value}</li>
+                    <li key={i}>{!value ? "Home" : value.replace(/-/g, " ")}</li>
                 ))}
             </ul>
         </div>

@@ -1,0 +1,57 @@
+.main p:nth-child(2){
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main p:nth-child(3){
+   color: gray;
+}
+
+.questions {
+    padding: 30px;
+}
+
+.container{
+    margin-bottom: 30px;
+}
+
+.container label{
+    display: flex;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+.container p:first-child{
+    margin-bottom: 10px;
+}
+
+.container input[type="radio"] {
+    /* Hide the default radio button */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    border: 2px solid #e5e5e5; /* Border color */
+    border-radius: 50%; /* Make it round */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Change the color of the radio button when selected */
+.container input[type="radio"]:checked {
+    background-color: var(---primary); /* Change background color */
+}
+
+.questions button{
+    padding: 12px 50px;
+    font-family: inherit;
+    text-transform: uppercase;
+    background-color: var(---primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 13px;
+}

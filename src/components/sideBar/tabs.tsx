@@ -21,22 +21,31 @@ import { CurrentPath } from "@/components/path";
 
 interface tabsProps {
     styles: any;
+    nav: (isOpen: boolean) => void;
 };
 
-const Tabs: React.FC<tabsProps> = ({ styles }) => {
+const Tabs: React.FC<tabsProps> = ({ styles, nav }) => {
     const active = CurrentPath();
+
+    // ==== Videos Child Reference
+    const newsChildProperties = ["latest","newsletter"];
     
     // ==== Videos Child Reference
     const videsChildProperties = ["introduction","more"];
-    const defaultSetOpenChildNav = videsChildProperties.includes(active) ? "videos" : "";
+    const defaultSetOpenChildNav = videsChildProperties.includes(active) ? "videos" : (newsChildProperties.includes(active) ? "news" : "");
 
     const [openChildNav, openChildNavSet] = useState(defaultSetOpenChildNav);
 
     // ==== For Videos Conditions
     const videosConditions = (videsChildProperties.includes(active) || openChildNav === "videos") && openChildNav !== "";
 
+    // ==== Videos Child Reference
+    const newsConditions = (newsChildProperties.includes(active) || openChildNav === "news") && openChildNav !== "";
+
     const handleOpenNavChild = (e: any, type: string) => {
         e.preventDefault();
+        
+        nav(false);
 
         if(openChildNav === type){
             return openChildNavSet("");
@@ -46,6 +55,8 @@ const Tabs: React.FC<tabsProps> = ({ styles }) => {
     }
 
     const handleOpenOtherPage = (type: string) => {
+        nav(false);
+
         if(openChildNav === type){
             return openChildNavSet("");
         }
@@ -107,16 +118,37 @@ const Tabs: React.FC<tabsProps> = ({ styles }) => {
                 </Link>
             </li>
             <li>
-                <Link href="/">
+                <Link href="/"className={newsConditions ? styles.active : ""} 
+                    onClick={(e) => handleOpenNavChild(e, "news")}>
                     <i className={styles["item-cion"]}>
                         <FontAwesomeIcon icon={faNewspaper} />
                     </i>
                     <span className={styles["item-name"]}>News</span>
                     <i className={styles["right-icon"]}>{Arrow}</i>
                 </Link>
+                <ul 
+                    className={newsConditions ? styles["open-child"] : styles["nav-child"] }
+                    data-max-height="110">
+                    <li>
+                        <Link 
+                            href="/news/latest" 
+                            className={active === "latest" ? styles["active-child"] : styles["iactive-child"] }>
+                                Latest
+                        </Link>
+                    </li>
+                    <li>
+                        <Link 
+                            href="/news/newsletter"
+                            className={active === "newsletter" ? styles["active-child"] : styles["iactive-child"] }>
+                                Newsletters
+                        </Link>
+                    </li>
+                </ul>
             </li>
             <li>
-                <Link href="/">
+                <Link href="/about-the-author"
+                    className={active === "about-the-author" ? styles.active : ""} 
+                    onClick={(e) => handleOpenOtherPage("about-the-author")}>
                     <i className={styles["item-cion"]}>
                         <FontAwesomeIcon icon={faUserTie} />
                     </i>
@@ -124,7 +156,9 @@ const Tabs: React.FC<tabsProps> = ({ styles }) => {
                 </Link>
             </li>
             <li>
-                <Link href="/">
+                <Link href="/book-ordering"
+                    className={active === "book-ordering" ? styles.active : ""} 
+                    onClick={(e) => handleOpenOtherPage("book-ordering")}>
                     <i className={styles["item-cion"]}>
                         <FontAwesomeIcon icon={faShoppingBag} />
                     </i>
@@ -132,7 +166,9 @@ const Tabs: React.FC<tabsProps> = ({ styles }) => {
                 </Link>
             </li>
             <li>
-                <Link href="/">
+                <Link href="/contact-us"
+                    className={active === "contact-us" ? styles.active : ""} 
+                    onClick={(e) => handleOpenOtherPage("contact-us")}>
                     <i className={styles["item-cion"]}>
                         <FontAwesomeIcon icon={faEnvelope} />
                     </i>
@@ -140,7 +176,9 @@ const Tabs: React.FC<tabsProps> = ({ styles }) => {
                 </Link>
             </li>
             <li>
-                <Link href="/">
+                <Link href="/survey"
+                    className={active === "survey" ? styles.active : ""} 
+                    onClick={(e) => handleOpenOtherPage("survey")}>
                     <i className={styles["item-cion"]}>
                         <FontAwesomeIcon icon={faPoll} />
                     </i>

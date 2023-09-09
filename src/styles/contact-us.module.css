@@ -1,0 +1,57 @@
+.main p:nth-child(2){
+   margin-bottom: 10px;
+   margin-top: 20px;
+}
+
+.main p:nth-child(3) {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    font-size: 13px;
+}
+
+.form-group label::before {
+    content: "*";
+    color: var(---primary);
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(---border);
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #e9e9e9;
+    resize: none;
+    font-size: 14px;
+}
+
+#mainform {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+#mainform button {
+    padding: 12px 50px;
+    font-family: inherit;
+    text-transform: uppercase;
+    background-color: var(---primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 13px;
+}

@@ -7,13 +7,14 @@ import Tabs from "./tabs";
 
 interface sideBarProps {
     styles: any;
+    nav: (isOpen: boolean) => void;
 };
 
-const Sidebar: React.FC<sideBarProps> = ({ styles }) => {
+const Sidebar: React.FC<sideBarProps> = ({ styles , nav}) => {
     return (
         <aside className={styles.sidebar}>
             <div className={styles.author}>
-                <Link href="/">
+                <Link href="/" onClick={() => nav(false)}>
                     <Image
                         height={50}
                         width={50}
@@ -29,7 +30,7 @@ const Sidebar: React.FC<sideBarProps> = ({ styles }) => {
                 <hr className="hr-horizontal" />
                 <span className="title">Navigation</span>
             </div>
-            <Tabs styles={styles} />
+            <Tabs styles={styles} nav={nav} />
         </aside>
     );
 }

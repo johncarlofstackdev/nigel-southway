@@ -1,12 +1,13 @@
 "use client";
 import "@/styles/globals.css"; // React library for building UI components
 import { Lexend_Deca } from "next/font/google"; // Google Fonts
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import Sidebar from "@/components/sideBar";
 import Breadcrumbs from "@/components/breadcrumbs";
 import TopBar from "@/components/topBar";
+import Overlay from "@/components/overlay";
 
 // Styles
 import left from "@/styles/left.module.css";
@@ -24,12 +25,28 @@ config.autoAddCss = false;
 export default function RootLayout({ children }: { children: React.ReactNode, title: string }) {
   const [openNav, openNavSet] = useState(false);
 
+  const updateOpenNav = () => {
+    if (window.innerWidth > 940) {
+      openNavSet(false);
+    }
+  };
+
+  // Add event listener when the component mounts
+  useEffect(() => {
+    // Initial check and event listener
+    window.addEventListener("resize", updateOpenNav);
+    // Remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", updateOpenNav);
+    };
+  }, []);
+
   return (
     <html lang="en">
       <body className={lexend_deca.className}>
         <div className="wrapper">
-          <div className={left.wrapper}>
-            <Sidebar styles={left} />
+          <div className={!openNav ? left.wrapper : left.openNav}>
+            <Sidebar styles={left} nav={openNavSet} />
           </div>
           <div className={right.wrapper}>
             <TopBar styles={right} nav={openNavSet} />
@@ -40,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode, ti
             </footer>
           </div>
         </div>
+        <Overlay styles={right} nav={openNavSet} isOpen={openNav} />
       </body>
     </html>
   );

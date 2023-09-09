@@ -1,0 +1,155 @@
+.content{
+    display: flex;
+    border-top: 1px solid var(---border);
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.list{
+    width: calc(100% - 350px);
+}
+
+.blogtab{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.filter{
+    display: flex;
+    column-gap: 5px;
+}
+
+.filter a{
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.filter a.active{
+    background-color: #ebebeb;
+}
+
+.searcharticle{
+    margin-left: auto;
+    border: none;
+    background: none;
+    margin-right: 30px;
+}
+
+.leftblog{
+    padding-top: 10px;
+    width: 350px;
+}
+
+.leftblog h4{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.postcard{
+    padding: 10px;
+}
+
+.postcard:hover{
+    background-color: beige;
+    transition: 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postcard span{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(---primary);
+}
+
+.postcard p{
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    color: gray;
+    font-size: 11px;
+}
+
+.cardcontent{
+    display: flex;
+    column-gap: 30px;
+}
+
+.cardcontent section{
+    width: 100%;
+}
+
+.cardcontent img{
+    height: 150px !important;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cardcontent section p {
+    color: #8c8c8c;
+    margin: 10px 0px;
+}
+
+.cardcontent section span{
+    color: var(---primary);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.cardblog{
+    margin: 10px;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+.cardblog:hover {
+    background-color: var(---border);
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cardtab{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.cardtab a{
+    font-size: 14px;
+    display: flex;
+    column-gap: 5px;
+    color: gray;
+}
+
+.cardtab a span{
+    position: relative;
+    font-size: 11px;
+}
+
+@media screen and (max-width: 940px) {
+    .leftblog {
+        display: none;
+    }
+    .list{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .cardcontent{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .cardcontent img{
+       width: 100% !important;
+       margin-bottom: 20px;
+    }
+}
